@@ -1,1 +1,48 @@
-<p>my-com works!</p>
+<h2>绑定</h2>
+<h3>字符串</h3>
+<p>{{ userName }}</p>
+<h3>属性</h3>
+<p title="{{ paraTitle }}">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quas ipsam
+  architecto corporis neque sequi incidunt laborum, totam deserunt, accusantium
+  corrupti aliquid reprehenderit, quasi libero quia amet. Fugit, sit recusandae.
+</p>
+<p [title]="paraTitle">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quas ipsam
+  architecto corporis neque sequi incidunt laborum, totam deserunt, accusantium
+  corrupti aliquid reprehenderit, quasi libero quia amet. Fugit, sit recusandae.
+</p>
+<h3>事件</h3>
+<p (click)="(clickPara)">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eaque,
+  reprehenderit recusandae saepe sequi voluptatibus magni ipsam illo culpa
+  minus, tenetur cupiditate a odio voluptate inventore non quod, esse
+  voluptatum.
+</p>
+<h3>样式</h3>
+<p [style.backgroundColor]="blueBack" [style.width.px]="paragraphWidth">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eaque,
+  reprehenderit recusandae saepe sequi voluptatibus magni ipsam illo culpa
+  minus, tenetur cupiditate a odio voluptate inventore non quod, esse
+  voluptatum.
+</p>
+<p [style]="styleObj">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eaque,
+  reprehenderit recusandae saepe sequi voluptatibus magni ipsam illo culpa
+  minus, tenetur cupiditate a odio voluptate inventore non quod, esse
+  voluptatum.
+</p>
+<h3>类</h3>
+<p [class.red-back]="isWarnning">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, vero
+  reprehenderit quos optio autem facere, aspernatur suscipit similique commodi,
+  exercitationem in? Voluptate voluptatum deleniti reprehenderit veritatis quod
+  eaque rerum soluta.
+</p>
+<p [class]="classObj">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, vero
+  reprehenderit quos optio autem facere, aspernatur suscipit similique commodi,
+  exercitationem in? Voluptate voluptatum deleniti reprehenderit veritatis quod
+  eaque rerum soluta.
+</p>
+<button (click)="toggleButton()">toggle</button>
