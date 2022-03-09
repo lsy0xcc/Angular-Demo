@@ -1,0 +1,7 @@
+<h2>表单 双向绑定</h2>
+<label>[(ngModel)]</label>
+<input type="text" [(ngModel)]="userName" />
+<input type="text" [ngModel]="userName" (ngModelChange)="upperCase($event)" />
+<input type="text" [(ngModel)]="userName" (ngModelChange)="upperCase2()" />
+<hr />
+<p>name:{{ userName }}</p>
