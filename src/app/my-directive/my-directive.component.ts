@@ -25,19 +25,19 @@ export class MyDirectiveComponent implements OnInit {
     return el.id;
   }
   showIndex: number = 0;
-  isValid(): boolean {
-    return false;
-  }
+  isValid: boolean = false;
   increase(): void {
     if (this.showIndex < this.toDoList.length - 1) {
       this.showIndex++;
     }
   }
-  decrease(): void{
+  decrease(): void {
     if (this.showIndex > 0) {
       this.showIndex--;
     }
   }
-  ngOnInit(): void {
+  toggle(): void {
+    this.isValid = !this.isValid;
   }
+  ngOnInit(): void {}
 }

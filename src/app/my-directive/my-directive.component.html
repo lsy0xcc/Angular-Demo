@@ -7,13 +7,13 @@
 
 <h3>分支</h3>
 <div id="test">
-  <ng-template *ngIf="isValid(); then content; else other_content"
+  <ng-template *ngIf="isValid then content else other_content"
     >here is ignored</ng-template
   >
 </div>
 <ng-template #content>content here...</ng-template>
 <ng-template #other_content>other content here...</ng-template>
-
+<button (click)="toggle()">toggle</button>
 <h3>switch</h3>
 <div [ngSwitch]="showIndex">
   <div *ngSwitchCase="0">First</div>
