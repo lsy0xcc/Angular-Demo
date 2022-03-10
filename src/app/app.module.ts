@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyComComponent } from './my-com/my-com.component';
 import { MyDirectiveComponent } from './my-directive/my-directive.component';
 import { MyFormComponent } from './my-form/my-form.component';
+import { MyStressDirectiveDirective } from './my-stress-directive.directive';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MyFormComponent } from './my-form/my-form.component';
     MyComComponent,
     MyDirectiveComponent,
     MyFormComponent,
+    MyStressDirectiveDirective,
   ],
   imports: [
     BrowserModule,
