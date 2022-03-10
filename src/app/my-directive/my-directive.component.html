@@ -1,15 +1,18 @@
 <h3>循环</h3>
 <ul>
   <li *ngFor="let e of toDoList; index as i; first as isFirst; trackByMethod">
-    {{ i }}-{{ e.text }} <span *ngIf="isFirst">default</span>
+    <span> {{ i }}-{{ e.text }} </span>
+    <span *ngIf="isFirst"> default </span>
+    <span> {{ e.complete }} </span>
+    <span> {{ e.complete | myPipe : true : "zh" }} </span>
   </li>
 </ul>
 
 <h3>分支</h3>
 <div id="test">
-  <ng-template *ngIf="isValid then content else other_content"
-    >here is ignored</ng-template
-  >
+  <ng-template *ngIf="isValid; then content; else other_content">
+    here is ignored
+  </ng-template>
 </div>
 <ng-template #content>content here...</ng-template>
 <ng-template #other_content>other content here...</ng-template>

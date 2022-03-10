@@ -9,6 +9,7 @@ import { MyComComponent } from './my-com/my-com.component';
 import { MyDirectiveComponent } from './my-directive/my-directive.component';
 import { MyFormComponent } from './my-form/my-form.component';
 import { MyStressDirectiveDirective } from './my-stress-directive.directive';
+import { MyPipePipe } from './my-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { MyStressDirectiveDirective } from './my-stress-directive.directive';
     MyDirectiveComponent,
     MyFormComponent,
     MyStressDirectiveDirective,
+    MyPipePipe,
   ],
   imports: [
     BrowserModule,

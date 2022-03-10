@@ -11,14 +11,17 @@ export class MyDirectiveComponent implements OnInit {
     {
       index: 1,
       text: 'Angular',
+      complete: false,
     },
     {
       index: 5,
       text: 'express',
+      complete: false,
     },
     {
       index: 10,
       text: 'java',
+      complete: true,
     },
   ];
   trackByMethod(index: number, el: any): number {
