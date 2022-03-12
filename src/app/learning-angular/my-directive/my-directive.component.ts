@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MyServiceService } from '../my-service.service';
+import { MyLogService } from '../my-log.service';
 
 @Component({
   selector: 'learning-angular-my-directive',
@@ -7,8 +7,8 @@ import { MyServiceService } from '../my-service.service';
   styleUrls: ['./my-directive.component.scss'],
 })
 export class MyDirectiveComponent implements OnInit {
-  serv: MyServiceService;
-  constructor(serv: MyServiceService) {
+  serv: MyLogService;
+  constructor(serv: MyLogService) {
     this.serv = serv;
   }
   toDoList: any[] = [

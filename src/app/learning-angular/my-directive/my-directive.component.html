@@ -4,7 +4,8 @@
     <span> {{ i }}-{{ e.text }} </span>
     <span *ngIf="isFirst"> default </span>
     <span> {{ e.complete }} </span>
-    <span> {{ e.complete | myPipe : true : "zh" }} </span>
+    <span> {{ e.complete | myCompleteFlag }} </span>
+    <span> {{ e.complete | myCompleteFlag : true : "zh" }} </span>
   </li>
 </ul>
 

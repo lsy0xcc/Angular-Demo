@@ -1,9 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'myPipe',
+  name: 'myCompleteFlag'
 })
-export class MyPipePipe implements PipeTransform {
+export class MyCompleteFlagPipe implements PipeTransform {
+
   transform(value: unknown, ...args: unknown[]): unknown {
     let [isText, lang] = args;
     if (!isText) {
@@ -15,4 +16,5 @@ export class MyPipePipe implements PipeTransform {
       return value ? 'Completed' : 'Not completed';
     }
   }
+
 }
