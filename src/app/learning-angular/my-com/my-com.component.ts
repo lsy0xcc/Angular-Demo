@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-my-com',
+  selector: 'learning-angular-my-com',
   templateUrl: './my-com.component.html',
   styleUrls: ['./my-com.component.scss'],
 })

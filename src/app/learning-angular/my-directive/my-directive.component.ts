@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { MyServiceService } from '../my-service.service';
 
 @Component({
-  selector: 'app-my-directive',
+  selector: 'learning-angular-my-directive',
   templateUrl: './my-directive.component.html',
   styleUrls: ['./my-directive.component.scss'],
 })
 export class MyDirectiveComponent implements OnInit {
-  constructor() {}
+  serv: MyServiceService;
+  constructor(serv: MyServiceService) {
+    this.serv = serv;
+  }
   toDoList: any[] = [
     {
       index: 1,
@@ -32,11 +36,13 @@ export class MyDirectiveComponent implements OnInit {
   increase(): void {
     if (this.showIndex < this.toDoList.length - 1) {
       this.showIndex++;
+      this.serv.doLog('increase');
     }
   }
   decrease(): void {
     if (this.showIndex > 0) {
       this.showIndex--;
+      this.serv.doLog('decrease');
     }
   }
   toggle(): void {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-my-form',
+  selector: 'learning-angular-my-form',
   templateUrl: './my-form.component.html',
   styleUrls: ['./my-form.component.scss'],
 })
@@ -10,7 +10,7 @@ export class MyFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  userName = '';
+  userName: string = '';
 
   upperCase($event: String) {
     this.userName = $event.toUpperCase();
