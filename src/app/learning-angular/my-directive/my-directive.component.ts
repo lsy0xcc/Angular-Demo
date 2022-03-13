@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MyLogService } from '../my-log.service';
+import { MyLogService } from '../shared/my-log.service';
 
 @Component({
   selector: 'learning-angular-my-directive',

@@ -6,4 +6,10 @@
 <hr />
 <p>name:{{ userName }}</p>
 
-
+<h2>Http 客户端</h2>
+<h4>汇率</h4>
+<button (click)="getCurrency()">获取信息</button>
+<p *ngIf="isLoading; else currency_data">加载中</p>
+<ng-template #currency_data curr>
+  <p>{{ currency | json }}</p>
+</ng-template>
