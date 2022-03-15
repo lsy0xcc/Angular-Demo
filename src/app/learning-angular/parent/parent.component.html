@@ -1,0 +1,9 @@
+<h2>父子组件</h2>
+
+<div class="father-pannel">
+  <h4>我是爸爸</h4>
+  <p><button (click)="generateRandom()">随机生成</button></p>
+  <p>自己：{{ myArray | json }}</p>
+  <p>儿子：{{ childArray | json }}</p>
+  <learning-angular-child [fatherArray]="myArray" (toFather)="getChild($event)"></learning-angular-child>
+</div>
