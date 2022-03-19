@@ -7,9 +7,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LearningAngularModule } from './learning-angular/learning-angular.module';
+import { NavigatorComponent } from './navigator/navigator.component';
+import { DefaultComponent } from './default/default.component';
+import { RouteTestComponent } from './route-test/route-test.component';
 
 @NgModule({
-  declarations: [AppComponent,],
+  declarations: [AppComponent, NavigatorComponent, DefaultComponent, RouteTestComponent,],
   imports: [
     BrowserModule,
     FormsModule,
