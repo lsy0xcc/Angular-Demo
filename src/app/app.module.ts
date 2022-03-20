@@ -7,12 +7,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LearningAngularModule } from './learning-angular/learning-angular.module';
-import { NavigatorComponent } from './navigator/navigator.component';
-import { DefaultComponent } from './default/default.component';
-import { RouteTestComponent } from './route-test/route-test.component';
+import { MyCoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [AppComponent, NavigatorComponent, DefaultComponent, RouteTestComponent,],
+  declarations: [
+    AppComponent,
+  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -20,6 +21,8 @@ import { RouteTestComponent } from './route-test/route-test.component';
     BrowserAnimationsModule,
     HttpClientModule,
     LearningAngularModule,
+    SharedModule,
+    MyCoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

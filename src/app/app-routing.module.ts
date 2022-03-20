@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LearningAngularModule } from './learning-angular/learning-angular.module';
-import { DefaultComponent } from './default/default.component';
-import { RouteTestComponent } from './route-test/route-test.component';
+import { DefaultComponent } from './shared/default/default.component';
+import { RouteTestComponent } from './shared/route-test/route-test.component';
+import { QueryGuard } from './core/query.guard';
 
 const routes: Routes = [
   { path: 'default', component: DefaultComponent },
@@ -24,6 +25,11 @@ const routes: Routes = [
   {
     path: 'layer1',
     children: [{ path: 'layer2', component: RouteTestComponent }],
+  },
+  {
+    path: 'router_guard',
+    component: RouteTestComponent,
+    canActivate: [QueryGuard],
   },
   { path: '', redirectTo: '/default', pathMatch: 'full' },
 ];

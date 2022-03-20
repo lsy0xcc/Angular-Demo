@@ -8,4 +8,9 @@
     >Link Jump</a
   >
   <button (click)="codeRoute3()">dynamic</button>
+  <a
+    [routerLink]="['/router_guard']"
+    [queryParams]="{ id: 123, type: 'routerLink' }"
+    >Link Jump</a
+  >
 </div>
